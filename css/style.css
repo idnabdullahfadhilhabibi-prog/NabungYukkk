@@ -1,0 +1,73 @@
+/* =========================================================
+   NabungYuk! — Custom Stylesheet (Complements Tailwind CSS)
+   ========================================================= */
+
+/* Active Navigation Pills & Filter Tabs */
+.nav-pill.active {
+  background-color: #ffffff;
+  color: #059669;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.dark .nav-pill.active {
+  background-color: #0f172a;
+  color: #34d399;
+}
+
+.goal-filter-btn.active,
+.sim-mode-btn.active {
+  background-color: #10b981;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+}
+
+/* Modal Pop Animation */
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal {
+  animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Toast Slide Animation */
+@keyframes toastSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast-item {
+  animation: toastSlide 0.25s ease-out;
+}
+
+/* Subtle Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
